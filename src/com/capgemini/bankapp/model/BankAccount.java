@@ -11,7 +11,7 @@ public class BankAccount {
 
 	public BankAccount() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public BankAccount(long accountId, String accountHoldername, String accountType, double accountBalance) {

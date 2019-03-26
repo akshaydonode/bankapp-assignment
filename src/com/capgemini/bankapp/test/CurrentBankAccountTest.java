@@ -17,7 +17,7 @@ private BankAccount account;
 	@Before
 	public void setUp()
 	{
-		account = new CurrentBankAccount(101, "John Doe", "SAVING", 45000, 10000);
+		account = new CurrentBankAccount(101, "John Doe", "CURRENT", 45000, 10000);
 	}
 	
 	@Test
@@ -28,11 +28,11 @@ private BankAccount account;
 	}
 	
 	@Test
-	public void testSavingBankAccountObjectIsCreatedWithParameterized()
+	public void testCurrentBankAccountObjectIsCreatedWithParameterized()
 	{
 		assertEquals(101, account.getAccountId());
 		assertEquals("John Doe", account.getAccountHoldername());
-		assertEquals("SAVING", account.getAccountType());
+		assertEquals("CURRENT", account.getAccountType());
 		assertEquals(45000, account.getAccountBalance(),0.01);
 		assertEquals(10000, ((CurrentBankAccount) account).getDebitLimit(),0.01);
 		assertEquals(0, ((CurrentBankAccount) account).getBorrowedAmount(),0.01);
